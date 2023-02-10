@@ -7,11 +7,11 @@
 # 6
 # -> 5
 
+from random import randint
 N = int(input('Введите число N: ')) 
-import random
 list_A=[]
 for i in range(N):
-    list_A.append(random.randint(1, N))
+    list_A.append(randint(1, N))
 if N > 0:
     print(*list_A)
     X = int(input('Введите число X: '))
@@ -22,3 +22,31 @@ if N > 0:
     print(f'Самый близкий по величине элемент к числу {X} -> {res}')
 else:
     print('Введите натуральное число N')
+
+# 2-й вариант решения:
+
+# from random import randint
+# n = int(input('Введите количество элементов: '))
+# lst = [randint(1, n) for i in range(n)]
+# print(lst)
+
+# input_set = set(lst)
+# num = int(input('Введите искомое число: '))
+# dif = 0
+# if num > max(input_set):
+#     print(max(input_set))
+# elif num < min(input_set):
+#     print(min(input_set))
+# else:
+#     while True:
+#         if num - dif in input_set and num + dif in input_set and num - dif != num + dif:
+#             print(num - dif, num + dif)
+#             break
+#         elif num - dif in input_set:
+#             print(num - dif)
+#             break
+#         elif num + dif in input_set:
+#             print(num + dif)
+#             break
+#         else:
+#             dif += 1    
