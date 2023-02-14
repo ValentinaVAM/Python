@@ -5,14 +5,14 @@
 
 from random import randint
 
-N = int(input('Введите кол-во элементов N множества: ')) 
-list_1=[]
+N = int(input('Введите кол-во элементов N множества: '))
+list_1 = []
 for i in range(N):
     list_1.append(randint(1, 10))
 set_1 = set(list_1)
 
-M = int(input('Введите кол-во элементов M множества: ')) 
-list_2=[]
+M = int(input('Введите кол-во элементов M множества: '))
+list_2 = []
 for i in range(M):
     list_2.append(randint(1, 10))
 set_2 = set(list_2)
